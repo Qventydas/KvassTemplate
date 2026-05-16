@@ -4,3 +4,5 @@
 
 [node name="BaseLevel" type="Node" unique_id=1994180562]
 script = ExtResource("1_hsjwf")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1945817134]

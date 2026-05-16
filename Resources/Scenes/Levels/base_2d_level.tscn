@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c6ndc5qv6qnnm"]
+
+[ext_resource type="PackedScene" uid="uid://bkdtx38eawo1f" path="res://Resources/Scenes/Levels/base_level.tscn" id="1_hwrb8"]
+
+[node name="Base2DLevel" unique_id=1994180562 node_paths=PackedStringArray("object_groups") instance=ExtResource("1_hwrb8")]
+object_groups = {
+"Objects": NodePath("MainCanvas/Objects"),
+"Technical": NodePath("MainCanvas/Technical"),
+"Visual": NodePath("MainCanvas/Visual")
+}
+
+[node name="MainCanvas" type="Node2D" parent="." index="0" unique_id=727165900]
+
+[node name="Objects" type="Node2D" parent="MainCanvas" index="0" unique_id=31290296]
+
+[node name="Visual" type="Node2D" parent="MainCanvas" index="1" unique_id=1475217502]
+
+[node name="Technical" type="Node2D" parent="MainCanvas" index="2" unique_id=1870330774]
+
+[node name="Background" type="CanvasLayer" parent="." index="1" unique_id=234127490]
+layer = -1
+
+[node name="Foreground" type="CanvasLayer" parent="." index="3" unique_id=949050972]
