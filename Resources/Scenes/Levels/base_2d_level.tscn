@@ -2,16 +2,16 @@
 
 [ext_resource type="PackedScene" uid="uid://bkdtx38eawo1f" path="res://Resources/Scenes/Levels/base_level.tscn" id="1_hwrb8"]
 
-[node name="Base2DLevel" unique_id=1994180562 node_paths=PackedStringArray("object_groups") instance=ExtResource("1_hwrb8")]
-object_groups = {
-"Objects": NodePath("MainCanvas/Objects"),
+[node name="Base2DLevel" unique_id=1994180562 node_paths=PackedStringArray("entity_groups") instance=ExtResource("1_hwrb8")]
+entity_groups = {
 "Technical": NodePath("MainCanvas/Technical"),
+"Things": NodePath("MainCanvas/Things"),
 "Visual": NodePath("MainCanvas/Visual")
 }
 
 [node name="MainCanvas" type="Node2D" parent="." index="0" unique_id=727165900]
 
-[node name="Objects" type="Node2D" parent="MainCanvas" index="0" unique_id=31290296]
+[node name="Things" type="Node2D" parent="MainCanvas" index="0" unique_id=31290296]
 
 [node name="Visual" type="Node2D" parent="MainCanvas" index="1" unique_id=1475217502]
 
