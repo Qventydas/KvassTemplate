@@ -1,0 +1,1 @@
+Just small game template for my godot games, idk why i write md for this.
