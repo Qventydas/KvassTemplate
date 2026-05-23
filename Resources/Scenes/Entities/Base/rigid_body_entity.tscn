@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dyh5e7m88h4jq"]
+
+[ext_resource type="PackedScene" uid="uid://dru3myrt77ssf" path="res://Resources/Scenes/Entities/Base/entity_data_container.tscn" id="1_4dm1q"]
+
+[node name="RigidBodyEntity" type="RigidBody2D" unique_id=1123632640]
+
+[node name="EntityDataContainer" parent="." unique_id=1357143083 instance=ExtResource("1_4dm1q")]
