@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dv8rtto6b5tnh"]
+
+[ext_resource type="Script" uid="uid://cst2g8e1npcqj" path="res://Scripts/RandGen/borders_procedure.gd" id="1_4rpup"]
+
+[node name="BordersProcedure" type="Node" unique_id=658389802]
+script = ExtResource("1_4rpup")
+metadata/_custom_type_script = "uid://cst2g8e1npcqj"

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://y36ctp028icw"]
+
+[ext_resource type="PackedScene" uid="uid://bxlnstnqsi87m" path="res://Resources/Scenes/GenProc/base_generation_procedure.tscn" id="1_8pd3p"]
+[ext_resource type="Script" uid="uid://cggf6m0ygoggo" path="res://Scripts/RandGen/spawn_and_clear.gd" id="2_rt66x"]
+
+[node name="SpawnAndClear" unique_id=250870730 instance=ExtResource("1_8pd3p")]
+script = ExtResource("2_rt66x")
+empty_area_range = 10
