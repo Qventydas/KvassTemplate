@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cq5euxxkr7eib"]
+
+[ext_resource type="Script" uid="uid://cycogu0hpho1j" path="res://Scripts/Audio/random_period_sound.gd" id="1_nvaso"]
+
+[node name="RandomTimeSound" type="AudioStreamPlayer" unique_id=380343984]
+script = ExtResource("1_nvaso")
+
+[node name="Timer" type="Timer" parent="." unique_id=421349227]
+
+[connection signal="finished" from="." to="." method="new_cycle"]
+[connection signal="timeout" from="Timer" to="." method="play"]
