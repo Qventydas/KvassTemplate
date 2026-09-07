@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cpy1r3gy4pf0p"]
+
+[ext_resource type="PackedScene" uid="uid://dkv6p8hj4iwg2" path="res://Resources/Scenes/Entities/Base/tile_map_entity.tscn" id="1_l62h0"]
+[ext_resource type="TileSet" uid="uid://csfhs4oh7efoa" path="res://Resources/Tilesets/test_tileset.tres" id="2_a7dnb"]
+[ext_resource type="Script" uid="uid://bmu1fnxofi7ff" path="res://Scripts/Entities/TileMap/noise_tile_generator.gd" id="3_o74da"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_l62h0"]
+frequency = 0.0418
+
+[node name="TileMapNoiseTest" unique_id=311139502 instance=ExtResource("1_l62h0")]
+tile_set = ExtResource("2_a7dnb")
+
+[node name="NoiseTileGenerator" type="Node" parent="EntityDataContainer" parent_id_path=PackedInt32Array(792230328) index="0" unique_id=1606120624]
+script = ExtResource("3_o74da")
+noise = SubResource("FastNoiseLite_l62h0")
+border_value = 0.5
+metadata/_custom_type_script = "uid://cibqhxmpgrit2"

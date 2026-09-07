@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://7fymabibm3qs"]
+
+[ext_resource type="Script" uid="uid://5l48kkciktfg" path="res://Scripts/RandGen/block_spawner.gd" id="1_1u5dm"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_gxc1k"]
+noise_type = 0
+seed = 9
+frequency = 0.0027
+fractal_type = 3
+fractal_gain = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_fvhc6"]
+noise = SubResource("FastNoiseLite_gxc1k")
+
+[node name="BlockSpawner" type="Node2D" unique_id=220074174]
+script = ExtResource("1_1u5dm")
+noise = SubResource("NoiseTexture2D_fvhc6")
+border_value = 0.1

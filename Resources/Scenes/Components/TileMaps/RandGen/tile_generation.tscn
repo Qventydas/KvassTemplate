@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://gpmmp7ku1kl8"]
+
+[ext_resource type="Script" uid="uid://8vomkqt0cyfh" path="res://Scripts/Components/TileMaps/tile_generation.gd" id="1_3nlaf"]
+
+[node name="TileGeneration" type="Node" unique_id=1036339387]
+script = ExtResource("1_3nlaf")
+metadata/_custom_type_script = "uid://cibqhxmpgrit2"

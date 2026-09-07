@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://dgeqssvhpc7ro"]
+
+[node name="RandDummy" type="Polygon2D" unique_id=847146844]
+polygon = PackedVector2Array(0, -5, 5, 0, 0, 5, -5, 0)
