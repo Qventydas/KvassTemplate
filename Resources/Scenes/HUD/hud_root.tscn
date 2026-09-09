@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bwramgarhoqgw"]
+
+[ext_resource type="Script" uid="uid://dco3cs5ehs623" path="res://Scripts/HUD/destionation_tracker.gd" id="1_4t8fg"]
+[ext_resource type="Script" uid="uid://cjdorjr8ltf3f" path="res://Scripts/HUD/hud_root.gd" id="1_628e7"]
+[ext_resource type="FontFile" uid="uid://bdkr0r6782pv0" path="res://Resources/Fonts/led/NEW LED DISPLAY ST.ttf" id="2_m2ne4"]
+
+[node name="HUDRoot" type="Control" unique_id=700884116]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_628e7")
+
+[node name="BoxContainer" type="VBoxContainer" parent="." unique_id=1591662688]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 50.0
+grow_horizontal = 0
+
+[node name="DestionationTracker" type="Label" parent="BoxContainer" unique_id=222607662]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_m2ne4")
+text = "???"
+horizontal_alignment = 1
+script = ExtResource("1_4t8fg")
+
+[node name="ScoreTracker" type="Label" parent="BoxContainer" unique_id=1582668444]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_m2ne4")
+text = "0"
+horizontal_alignment = 1
