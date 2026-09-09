@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://ciaixc32yji8c"]
+
+[ext_resource type="PackedScene" uid="uid://b1ibyikw77yv3" path="res://Resources/Scenes/Entities/2D/Projectiles/Hitscan/base_hit_scan.tscn" id="1_hsltn"]
+[ext_resource type="PackedScene" uid="uid://bemucyxa1n6rh" path="res://Resources/Scenes/Components/TileMaps/TileDestroyer.tscn" id="2_tfisv"]
+[ext_resource type="PackedScene" uid="uid://bmd70v3lwar81" path="res://Resources/Scenes/Components/Despawn/despawn_on_timer.tscn" id="3_hsltn"]
+[ext_resource type="PackedScene" uid="uid://rliyb377rrer" path="res://Resources/Scenes/Components/Spawn/entity_spawner.tscn" id="4_tfisv"]
+[ext_resource type="PackedScene" uid="uid://s8lwr1wfs5pb" path="res://Resources/Scenes/Entities/2D/Effects/drilling_laser_hit_effect.tscn" id="5_kwit6"]
+
+[sub_resource type="Curve" id="Curve_o8tfe"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.64044946), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Animation" id="Animation_kwit6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Line2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_eae3w"]
+resource_name = "glow"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Line2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.4),
+"transitions": PackedFloat32Array(0.16493858, 0.5358867, 1),
+"update": 0,
+"values": [Color(0, 0.6833334, 1, 0), Color(0, 0.6833334, 1, 1), Color(0, 0.6833334, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6n73x"]
+_data = {
+&"RESET": SubResource("Animation_kwit6"),
+&"glow": SubResource("Animation_eae3w")
+}
+
+[node name="TileDestroyHitScan" unique_id=360574137 instance=ExtResource("1_hsltn")]
+
+[node name="RayCast" parent="EntityDataContainer" parent_id_path=PackedInt32Array(653288972) index="0" unique_id=7171067]
+cells_range = 6
+
+[node name="TileDestroyer" parent="EntityDataContainer" parent_id_path=PackedInt32Array(653288972) index="1" unique_id=1827931343 instance=ExtResource("2_tfisv")]
+
+[node name="DespawnOnTimer" parent="EntityDataContainer" parent_id_path=PackedInt32Array(653288972) index="2" unique_id=1511990061 instance=ExtResource("3_hsltn")]
+
+[node name="EntitySpawner" parent="EntityDataContainer" parent_id_path=PackedInt32Array(653288972) index="3" unique_id=1670064123 instance=ExtResource("4_tfisv")]
+scenes_to_spawn = Array[PackedScene]([ExtResource("5_kwit6")])
+group = "Visual"
+
+[node name="Line2D" parent="." index="2" unique_id=1902803742]
+width_curve = SubResource("Curve_o8tfe")
+default_color = Color(0, 0.6833334, 1, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3" unique_id=156913135]
+libraries/ = SubResource("AnimationLibrary_6n73x")
+
+[connection signal="ready" from="." to="AnimationPlayer" method="play" binds= [&"glow"]]
+[connection signal="cells_collide" from="EntityDataContainer/RayCast" to="EntityDataContainer/TileDestroyer" method="erase_tiles"]
+[connection signal="no_collide" from="EntityDataContainer/RayCast" to="EntityDataContainer/EntitySpawner" method="handle_cord_spawn"]
+[connection signal="thing_collide" from="EntityDataContainer/RayCast" to="EntityDataContainer/EntitySpawner" method="handle_body_collide"]

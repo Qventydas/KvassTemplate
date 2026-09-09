@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bwwndykoam327"]
+
+[ext_resource type="Script" uid="uid://btfdvfwieo6q0" path="res://Scripts/Components/Projectiles/ray_cast.gd" id="1_djf3k"]
+
+[node name="RayCast" type="Node" unique_id=7171067]
+script = ExtResource("1_djf3k")
+cells_range = 5
+metadata/_custom_type_script = "uid://cibqhxmpgrit2"

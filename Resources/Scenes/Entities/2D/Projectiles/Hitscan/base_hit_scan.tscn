@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b1ibyikw77yv3"]
+
+[ext_resource type="PackedScene" uid="uid://b111ta70rnwhd" path="res://Resources/Scenes/Entities/Base/node_2d_entity.tscn" id="1_101md"]
+[ext_resource type="PackedScene" uid="uid://bwwndykoam327" path="res://Resources/Scenes/Components/Projectiles/HitScan/tile_destroy_ray_cast.tscn" id="2_0a4ug"]
+
+[node name="BaseHitScan" unique_id=360574137 instance=ExtResource("1_101md")]
+
+[node name="RayCast" parent="EntityDataContainer" parent_id_path=PackedInt32Array(653288972) index="0" unique_id=7171067 node_paths=PackedStringArray("ray_cast", "visual_line") instance=ExtResource("2_0a4ug")]
+ray_cast = NodePath("../../RayCast2D")
+visual_line = NodePath("../../Line2D")
+
+[node name="RayCast2D" type="RayCast2D" parent="." index="1" unique_id=1841275113]
+target_position = Vector2(200, 0)
+collision_mask = 2
+
+[node name="Line2D" type="Line2D" parent="." index="2" unique_id=1902803742]
