@@ -1,0 +1,48 @@
+[gd_resource type="VisualShader" format=3 uid="uid://cfhvkibsljwqx"]
+
+[ext_resource type="Texture2D" uid="uid://b33lkjlkvtl5w" path="res://Resources/Sprites/Mech/track_piece.png" id="1_hnsab"]
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_a3hkg"]
+source = 5
+texture = ExtResource("1_hnsab")
+
+[sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_adoty"]
+parameter_name = "Texture2DParameter"
+texture_filter = 1
+texture_repeat = 1
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_1ylv0"]
+input_name = "uv"
+
+[sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_4ekqo"]
+default_input_values = [0, Vector2(0, 0), 1, Vector2(0, 0)]
+op_type = 0
+
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_pq5sy"]
+parameter_name = "Offset"
+
+[sub_resource type="VisualShaderNodeVectorCompose" id="VisualShaderNodeVectorCompose_mutfd"]
+op_type = 0
+
+[sub_resource type="VisualShaderNodeVectorDecompose" id="VisualShaderNodeVectorDecompose_x0y0c"]
+default_input_values = [0, Quaternion(0, 0, 0, 0)]
+op_type = 2
+
+[resource]
+mode = 1
+flags/light_only = false
+nodes/fragment/2/node = SubResource("VisualShaderNodeTexture_a3hkg")
+nodes/fragment/2/position = Vector2(-180, 200)
+nodes/fragment/3/node = SubResource("VisualShaderNodeTexture2DParameter_adoty")
+nodes/fragment/3/position = Vector2(-717.7131, 17.95459)
+nodes/fragment/4/node = SubResource("VisualShaderNodeInput_1ylv0")
+nodes/fragment/4/position = Vector2(-980, 360)
+nodes/fragment/5/node = SubResource("VisualShaderNodeVectorOp_4ekqo")
+nodes/fragment/5/position = Vector2(-480, 320)
+nodes/fragment/6/node = SubResource("VisualShaderNodeFloatParameter_pq5sy")
+nodes/fragment/6/position = Vector2(-960, 520)
+nodes/fragment/7/node = SubResource("VisualShaderNodeVectorCompose_mutfd")
+nodes/fragment/7/position = Vector2(-580, 520)
+nodes/fragment/8/node = SubResource("VisualShaderNodeVectorDecompose_x0y0c")
+nodes/fragment/8/position = Vector2(100, 380)
+nodes/fragment/connections = PackedInt32Array(3, 0, 2, 2, 2, 0, 0, 0, 4, 0, 5, 0, 5, 0, 2, 0, 6, 0, 7, 0, 7, 0, 5, 1, 2, 0, 8, 0, 8, 3, 0, 1)
