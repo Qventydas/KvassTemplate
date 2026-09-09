@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dqq2spujgbpy3"]
+
+[ext_resource type="Script" uid="uid://c3vbfj7bqnc8t" path="res://Scripts/Components/Movement/look_at_mouse.gd" id="1_jf4ki"]
+
+[node name="LookAtMouse" type="Node" unique_id=624718951]
+script = ExtResource("1_jf4ki")
+metadata/_custom_type_script = "uid://cibqhxmpgrit2"

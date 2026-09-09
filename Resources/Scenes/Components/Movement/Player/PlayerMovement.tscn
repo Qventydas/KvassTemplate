@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://h2svgv18l23i"]
+
+[ext_resource type="Script" uid="uid://ber2hhqvtr21" path="res://Scripts/Components/Movement/Player/player_movement.gd" id="1_dc2lb"]
+
+[node name="PlayerMovement" type="Node" unique_id=919398047]
+script = ExtResource("1_dc2lb")
+metadata/_custom_type_script = "uid://cibqhxmpgrit2"
