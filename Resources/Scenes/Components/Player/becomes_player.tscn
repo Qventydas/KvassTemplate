@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://doquuw8spa0wk"]
+
+[ext_resource type="Script" uid="uid://c03n58wvo2a4d" path="res://Scripts/Components/Player/becomes_player.gd" id="1_xg1j2"]
+
+[node name="BecomesPlayer" type="Node" unique_id=2101379229]
+script = ExtResource("1_xg1j2")
+metadata/_custom_type_script = "uid://cibqhxmpgrit2"
