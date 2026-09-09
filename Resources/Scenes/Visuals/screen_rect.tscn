@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cx8twsbiq1dvf"]
+
+[ext_resource type="Script" uid="uid://d30g6ifkvf8pd" path="res://Scripts/Visual/screen_rect.gd" id="1_rxq48"]
+
+[node name="ScreenRect" type="ColorRect" unique_id=770356307]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.52, 0, 0.38133344, 0.41568628)
+script = ExtResource("1_rxq48")
