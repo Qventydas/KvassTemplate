@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://d0asow88cy0bp"]
+
+[ext_resource type="PackedScene" uid="uid://c8qx0taanwd71" path="res://Resources/Scenes/Entities/Base/character_entity.tscn" id="1_nve4w"]
+[ext_resource type="PackedScene" uid="uid://h2svgv18l23i" path="res://Resources/Scenes/Components/Movement/Player/PlayerMovement.tscn" id="2_7ctvb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ctvb"]
+radius = 32.0
+height = 126.0
+
+[node name="PlayerDummyTank" unique_id=1499194390 instance=ExtResource("1_nve4w")]
+motion_mode = 1
+
+[node name="BaseTopDownMovement" parent="EntityDataContainer" parent_id_path=PackedInt32Array(1683312458) index="0" unique_id=919398047 instance=ExtResource("2_7ctvb")]
+movement_type = 1
+linear_speed = 100.0
+lerp_speed = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1" unique_id=566774158]
+shape = SubResource("CapsuleShape2D_7ctvb")

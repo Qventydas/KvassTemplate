@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bhqni250t3k0h"]
+
+[ext_resource type="PackedScene" uid="uid://c8qx0taanwd71" path="res://Resources/Scenes/Entities/Base/character_entity.tscn" id="1_no8qs"]
+[ext_resource type="PackedScene" uid="uid://h2svgv18l23i" path="res://Resources/Scenes/Components/Movement/Player/PlayerMovement.tscn" id="2_x8bim"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_no8qs"]
+radius = 23.345236
+
+[node name="PlayerDummyTopDown" unique_id=1499194390 instance=ExtResource("1_no8qs")]
+motion_mode = 1
+
+[node name="BaseTopDownMovement" parent="EntityDataContainer" parent_id_path=PackedInt32Array(1683312458) index="0" unique_id=919398047 instance=ExtResource("2_x8bim")]
+linear_speed = 100
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1" unique_id=2144654993]
+shape = SubResource("CircleShape2D_no8qs")
