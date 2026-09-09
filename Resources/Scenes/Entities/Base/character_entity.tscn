@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c8qx0taanwd71"]
+
+[ext_resource type="Script" uid="uid://ctl2j1wsefd8l" path="res://Scripts/Entities/entity_data_container.gd" id="1_54mam"]
+
+[node name="CharacterEntity" type="CharacterBody2D" unique_id=1499194390]
+
+[node name="EntityDataContainer" type="Node" parent="." unique_id=1683312458]
+script = ExtResource("1_54mam")
+metadata/_custom_type_script = "uid://ctl2j1wsefd8l"

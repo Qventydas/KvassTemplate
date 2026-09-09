@@ -6,3 +6,5 @@
 script = ExtResource("1_hsjwf")
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1945817134]
+
+[node name="Music" type="Node" parent="." unique_id=500694637]

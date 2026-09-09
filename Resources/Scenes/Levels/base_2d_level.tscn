@@ -20,4 +20,10 @@ entity_groups = {
 [node name="Background" type="CanvasLayer" parent="." index="1" unique_id=234127490]
 layer = -1
 
+[node name="HUD" parent="." index="2" unique_id=1945817134]
+layer = 3
+
 [node name="Foreground" type="CanvasLayer" parent="." index="3" unique_id=949050972]
+
+[node name="ColorCorrection" type="CanvasLayer" parent="." index="4" unique_id=1147612338]
+layer = 2

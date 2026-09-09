@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://dyh5e7m88h4jq"]
 
-[ext_resource type="PackedScene" uid="uid://dru3myrt77ssf" path="res://Resources/Scenes/Entities/Base/entity_data_container.tscn" id="1_4dm1q"]
+[ext_resource type="Script" uid="uid://ctl2j1wsefd8l" path="res://Scripts/Entities/entity_data_container.gd" id="1_4dm1q"]
 
 [node name="RigidBodyEntity" type="RigidBody2D" unique_id=1123632640]
 
-[node name="EntityDataContainer" parent="." unique_id=1357143083 instance=ExtResource("1_4dm1q")]
+[node name="EntityDataContainer" type="Node" parent="." unique_id=254479825]
+script = ExtResource("1_4dm1q")
+metadata/_custom_type_script = "uid://ctl2j1wsefd8l"

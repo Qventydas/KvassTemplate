@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dkv6p8hj4iwg2"]
+
+[ext_resource type="Script" uid="uid://ctl2j1wsefd8l" path="res://Scripts/Entities/entity_data_container.gd" id="1_0apno"]
+
+[node name="TileMapEntity" type="TileMapLayer" unique_id=311139502]
+
+[node name="EntityDataContainer" type="Node" parent="." unique_id=792230328]
+script = ExtResource("1_0apno")
+metadata/_custom_type_script = "uid://ctl2j1wsefd8l"
