@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c0pc0qoqo4t4l"]
+
+[ext_resource type="Script" uid="uid://rldh77rsce6p" path="res://Scripts/Components/Level/change_level_on_collide.gd" id="1_wiknu"]
+
+[node name="ChangeLevelOnCollide" type="Node" unique_id=1930037273]
+script = ExtResource("1_wiknu")
+target_scene_path = "res://Resources/Scenes/Levels/Ready/level_one.tscn"
+metadata/_custom_type_script = "uid://cibqhxmpgrit2"
