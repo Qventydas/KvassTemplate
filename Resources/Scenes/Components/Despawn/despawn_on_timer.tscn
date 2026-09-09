@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bmd70v3lwar81"]
+
+[ext_resource type="Script" uid="uid://cl7u1n80vpq8o" path="res://Scripts/Components/Despawn/despawn_on_timer.gd" id="1_0m2yw"]
+
+[node name="DespawnOnTimer" type="Node" unique_id=1511990061]
+script = ExtResource("1_0m2yw")
+metadata/_custom_type_script = "uid://cibqhxmpgrit2"
