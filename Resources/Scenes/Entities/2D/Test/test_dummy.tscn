@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bbf20iw4xkdty"]
+
+[ext_resource type="PackedScene" uid="uid://b111ta70rnwhd" path="res://Resources/Scenes/Entities/Base/node_2d_entity.tscn" id="1_8sks1"]
+[ext_resource type="Texture2D" uid="uid://fk4wtpbtc840" path="res://icon.svg" id="2_qmg8n"]
+
+[node name="TestDummy" unique_id=360574137 instance=ExtResource("1_8sks1")]
+
+[node name="Icon" type="Sprite2D" parent="." index="1" unique_id=1516197758]
+modulate = Color(1, 0, 0, 1)
+texture = ExtResource("2_qmg8n")
