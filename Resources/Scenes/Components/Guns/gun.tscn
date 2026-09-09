@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://fvq2cd2n4ln5"]
+
+[ext_resource type="Script" uid="uid://btwdh5d7ir5xm" path="res://Scripts/Components/Guns/gun.gd" id="1_83m4t"]
+[ext_resource type="PackedScene" uid="uid://bbf20iw4xkdty" path="res://Resources/Scenes/Entities/2D/Test/test_dummy.tscn" id="2_43ydf"]
+
+[node name="Gun" type="Node" unique_id=1131353188]
+script = ExtResource("1_83m4t")
+projectile_scene = ExtResource("2_43ydf")
+metadata/_custom_type_script = "uid://cibqhxmpgrit2"

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://oimgc2p1ia2t"]
+
+[ext_resource type="PackedScene" uid="uid://b111ta70rnwhd" path="res://Resources/Scenes/Entities/Base/node_2d_entity.tscn" id="1_eask2"]
+[ext_resource type="PackedScene" uid="uid://fvq2cd2n4ln5" path="res://Resources/Scenes/Components/Guns/gun.tscn" id="2_pp2r8"]
+[ext_resource type="Texture2D" uid="uid://fk4wtpbtc840" path="res://icon.svg" id="3_amw7a"]
+[ext_resource type="PackedScene" uid="uid://ciaixc32yji8c" path="res://Resources/Scenes/Entities/2D/Projectiles/Hitscan/tile_destroy_hit_scan.tscn" id="3_n5jc6"]
+
+[node name="BaseGunEntity" unique_id=360574137 instance=ExtResource("1_eask2")]
+
+[node name="Gun" parent="EntityDataContainer" parent_id_path=PackedInt32Array(653288972) index="0" unique_id=1131353188 instance=ExtResource("2_pp2r8")]
+cooldown = 0.35
+projectile_scene = ExtResource("3_n5jc6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="1" unique_id=1496751951]
+texture = ExtResource("3_amw7a")
