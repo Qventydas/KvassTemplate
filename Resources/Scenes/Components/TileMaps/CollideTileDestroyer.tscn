@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ban6l7f7saf25"]
+
+[ext_resource type="Script" uid="uid://b2ws5h7m0mtps" path="res://Scripts/Components/TileMaps/tile_destroyer.gd" id="1_s07ux"]
+
+[node name="TileDestroyer" type="Node" unique_id=1827931343]
+script = ExtResource("1_s07ux")
+metadata/_custom_type_script = "uid://cibqhxmpgrit2"

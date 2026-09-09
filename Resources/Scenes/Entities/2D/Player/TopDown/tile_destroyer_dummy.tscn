@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://k46wmcp4j7gr"]
+
+[ext_resource type="PackedScene" uid="uid://bhqni250t3k0h" path="res://Resources/Scenes/Entities/2D/Player/TopDown/player_dummy_top_down.tscn" id="1_p1tew"]
+[ext_resource type="PackedScene" uid="uid://ban6l7f7saf25" path="res://Resources/Scenes/Components/TileMaps/TileDestroyer.tscn" id="2_1tef3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8i5ja"]
+radius = 29.0
+
+[node name="TileDestroyerDummy" unique_id=1499194390 instance=ExtResource("1_p1tew")]
+
+[node name="BaseTopDownMovement" parent="EntityDataContainer" parent_id_path=PackedInt32Array(1683312458) index="0" unique_id=919398047]
+linear_speed = 1.0
+
+[node name="TileDestroyer" parent="EntityDataContainer" parent_id_path=PackedInt32Array(1683312458) index="1" unique_id=1827931343 instance=ExtResource("2_1tef3")]
+tile_range = 3
+
+[node name="TileDestroyArea" type="Area2D" parent="." index="2" unique_id=420752839]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileDestroyArea" index="0" unique_id=1425408600]
+shape = SubResource("CircleShape2D_8i5ja")
+
+[connection signal="body_entered" from="TileDestroyArea" to="EntityDataContainer/TileDestroyer" method="tilemap_collide"]
