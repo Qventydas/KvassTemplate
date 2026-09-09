@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dnx3awk8qqu0u"]
+
+[ext_resource type="Script" uid="uid://dorf0yc2skgy3" path="res://Scripts/Components/Visual/mech_track.gd" id="1_8i7ww"]
+
+[node name="MechTrack" type="Node" unique_id=1793569272]
+script = ExtResource("1_8i7ww")
+metadata/_custom_type_script = "uid://cibqhxmpgrit2"
