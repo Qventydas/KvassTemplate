@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c025vn3q68svy"]
+
+[ext_resource type="PackedScene" uid="uid://dkv6p8hj4iwg2" path="res://Resources/Scenes/Entities/Base/tile_map_entity.tscn" id="1_bynoy"]
+[ext_resource type="PackedScene" uid="uid://gpmmp7ku1kl8" path="res://Resources/Scenes/Components/TileMaps/RandGen/tile_generation.tscn" id="2_71ny6"]
+
+[node name="BaseLevelTileMap" unique_id=311139502 instance=ExtResource("1_bynoy")]
+
+[node name="TileGenerationProcedures" parent="EntityDataContainer" parent_id_path=PackedInt32Array(792230328) index="0" unique_id=1036339387 instance=ExtResource("2_71ny6")]
