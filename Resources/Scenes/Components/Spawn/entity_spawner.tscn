@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://rliyb377rrer"]
+
+[ext_resource type="Script" uid="uid://d1g2blbbq5jto" path="res://Scripts/Components/Spawn/entity_spawner.gd" id="1_scnb6"]
+
+[node name="EntitySpawner" type="Node" unique_id=1670064123]
+script = ExtResource("1_scnb6")
+metadata/_custom_type_script = "uid://cibqhxmpgrit2"

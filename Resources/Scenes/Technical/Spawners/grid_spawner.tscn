@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cfyposhp46kah"]
+
+[ext_resource type="Script" uid="uid://c2846fun3mrg3" path="res://Scripts/RandGen/grid_spawner.gd" id="1_1u53v"]
+
+[node name="GridSpawner" type="Node2D" unique_id=890910679]
+script = ExtResource("1_1u53v")
