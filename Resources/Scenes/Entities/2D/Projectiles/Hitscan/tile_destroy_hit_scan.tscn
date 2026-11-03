@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://bemucyxa1n6rh" path="res://Resources/Scenes/Components/TileMaps/TileDestroyer.tscn" id="2_tfisv"]
 [ext_resource type="PackedScene" uid="uid://bmd70v3lwar81" path="res://Resources/Scenes/Components/Despawn/despawn_on_timer.tscn" id="3_hsltn"]
 [ext_resource type="PackedScene" uid="uid://rliyb377rrer" path="res://Resources/Scenes/Components/Spawn/entity_spawner.tscn" id="4_tfisv"]
-[ext_resource type="PackedScene" uid="uid://s8lwr1wfs5pb" path="res://Resources/Scenes/Entities/2D/Effects/drilling_laser_hit_effect.tscn" id="5_kwit6"]
 
 [sub_resource type="Curve" id="Curve_o8tfe"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.64044946), 0.0, 0.0, 0, 0]
@@ -56,7 +55,6 @@ cells_range = 6
 [node name="DespawnOnTimer" parent="EntityDataContainer" parent_id_path=PackedInt32Array(653288972) index="2" unique_id=1511990061 instance=ExtResource("3_hsltn")]
 
 [node name="EntitySpawner" parent="EntityDataContainer" parent_id_path=PackedInt32Array(653288972) index="3" unique_id=1670064123 instance=ExtResource("4_tfisv")]
-scenes_to_spawn = Array[PackedScene]([ExtResource("5_kwit6")])
 group = "Visual"
 
 [node name="Line2D" parent="." index="2" unique_id=1902803742]
