@@ -1,6 +1,6 @@
 extends Node
 class_name EntityDataContainer
-@export var EntityDatas: Dictionary[String,EntityData] = {}
+var EntityDatas: Dictionary[String,EntityData] = {}
 @export var main_node: Node
 
 var uid: int
@@ -13,6 +13,7 @@ func get_data(key: String) -> EntityData:
 
 func add_data(data: EntityData):
 	add_child(data)
+	EntityDatas[data.name] = data
 
 func remove_data(key: String):
 	if key in EntityDatas.keys():
@@ -23,5 +24,8 @@ func _ready() -> void:
 	main_node = get_parent()
 	EntityManager.add_entity(self)
 	for child in get_children():
-		EntityDatas[child.name] = child
-		child.data_init()
+		if child is EntityData:
+			EntityDatas[child.name] = child
+			child.data_init()
+		else:
+			printerr("Non-data in EntityDataContainer!")
