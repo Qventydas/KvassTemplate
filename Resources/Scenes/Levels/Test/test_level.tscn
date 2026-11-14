@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://cy48jp4qx84in"]
 
 [ext_resource type="PackedScene" uid="uid://c6ndc5qv6qnnm" path="res://Resources/Scenes/Levels/base_2d_level.tscn" id="1_p1003"]
-[ext_resource type="PackedScene" uid="uid://oimgc2p1ia2t" path="res://Resources/Scenes/Entities/2D/Guns/base_gun_entity.tscn" id="2_7vtwr"]
-[ext_resource type="PackedScene" uid="uid://bmd70v3lwar81" path="res://Resources/Scenes/Components/Despawn/despawn_on_timer.tscn" id="3_bk7vq"]
+[ext_resource type="PackedScene" uid="uid://bx2ic6yvhhp74" path="res://Resources/Scenes/Entities/2D/Player/Titan/basic_titan.tscn" id="2_7vtwr"]
 [ext_resource type="PackedScene" uid="uid://bwramgarhoqgw" path="res://Resources/Scenes/HUD/hud_root.tscn" id="6_dkx21"]
 
 [node name="TestLevel" unique_id=1994180562 node_paths=PackedStringArray("entity_groups") instance=ExtResource("1_p1003")]
@@ -14,12 +13,8 @@ entity_groups = {
 metadata/_edit_vertical_guides_ = [1152.0]
 metadata/_edit_horizontal_guides_ = [648.0]
 
-[node name="BaseGunEntity" parent="MainCanvas/Things" parent_id_path=PackedInt32Array(31290296) index="0" unique_id=360574137 instance=ExtResource("2_7vtwr")]
-
-[node name="DespawnOnTimer" parent="MainCanvas/Things/BaseGunEntity/EntityDataContainer" parent_id_path=PackedInt32Array(360574137, 653288972) index="1" unique_id=1511990061 instance=ExtResource("3_bk7vq")]
-time = 12.0
-
-[node name="BaseGunEntity2" parent="MainCanvas/Things" parent_id_path=PackedInt32Array(31290296) index="1" unique_id=534080978 instance=ExtResource("2_7vtwr")]
+[node name="BasicTitan" parent="MainCanvas/Things" parent_id_path=PackedInt32Array(31290296) index="0" unique_id=1499194390 instance=ExtResource("2_7vtwr")]
+position = Vector2(521, 356)
 
 [node name="TestNoise" type="Sprite2D" parent="MainCanvas" parent_id_path=PackedInt32Array(727165900) index="1" unique_id=454206086]
 visible = false
@@ -27,16 +22,22 @@ texture_filter = 1
 position = Vector2(4096, 4096)
 scale = Vector2(16, 16)
 
-[node name="Parallax2D" type="Parallax2D" parent="Background" parent_id_path=PackedInt32Array(234127490) index="0" unique_id=270166364]
-visible = false
-repeat_size = Vector2(1152, 648)
+[node name="Background" parent="." index="1" unique_id=234127490]
+follow_viewport_enabled = true
+
+[node name="Parallax2D" type="Parallax2D" parent="Background" index="0" unique_id=270166364]
+repeat_size = Vector2(576, 648)
 repeat_times = 4
 
 [node name="ColorRect" type="ColorRect" parent="Background/Parallax2D" index="0" unique_id=1354762490]
+visible = false
 offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Background/Parallax2D" index="1" unique_id=1346941283]
+polygon = PackedVector2Array(80, 61, 122, 62, 90, 99)
 
 [node name="HUD" parent="." index="2" unique_id=1945817134]
 follow_viewport_enabled = true
@@ -46,5 +47,3 @@ follow_viewport_enabled = true
 [node name="CanvasModulate" type="CanvasModulate" parent="." index="4" unique_id=1785824202]
 visible = false
 color = Color(0, 0, 0, 1)
-
-[editable path="MainCanvas/Things/BaseGunEntity"]
