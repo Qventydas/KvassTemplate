@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Weep-Titan"
-run/main_scene="uid://cy48jp4qx84in"
+config/name="KvassTemplate"
+run/main_scene="uid://c031d5llfxrwn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
